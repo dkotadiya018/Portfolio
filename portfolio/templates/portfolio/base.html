@@ -1,0 +1,98 @@
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Dhruv Kotadiya - Portfolio{% endblock %}</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'portfolio/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'portfolio/css/animations.css' %}">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar glass-effect">
+        <div class="container nav-container">
+            <div class="logo">
+                <i class="fas fa-code"></i>
+                <span class="logo-text">Dhruv Kotadiya</span>
+            </div>
+
+            <ul class="nav-menu">
+                <li><a href="{% url 'home' %}" class="nav-link {% if request.path == '/' %}active{% endif %}">Home</a></li>
+                <li><a href="{% url 'about' %}" class="nav-link {% if 'about' in request.path %}active{% endif %}">About</a></li>
+                <li><a href="{% url 'services' %}" class="nav-link {% if 'services' in request.path %}active{% endif %}">Services</a></li>
+                <li><a href="{% url 'projects' %}" class="nav-link {% if 'projects' in request.path %}active{% endif %}">Projects</a></li>
+                <li><a href="{% url 'contact' %}" class="nav-link {% if 'contact' in request.path %}active{% endif %}">Contact</a></li>
+            </ul>
+
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="gradient-text">Dhruv Kotadiya</h3>
+                    <p>Crafting Digital Experiences with Creativity & Code</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="{% url 'home' %}">Home</a></li>
+                        <li><a href="{% url 'about' %}">About</a></li>
+                        <li><a href="{% url 'services' %}">Services</a></li>
+                        <li><a href="{% url 'projects' %}">Projects</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/dhruv-kotadiya-cte-gecbvn-ict" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                        <a href=https://github.com/dkotadiya018 class="social-icon"><i class="fab fa-github"></i></a>
+                        <a href="https://www.instagram.com/_dhruv_kotadiya_1412?igsh=MWZ5dWh0YWlxNWJjYQ==" class="social-icon"><i class="fab fa-instagram"></i></a>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Dhruv Kotadiya | Designed with Passion + AI</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script src="{% static 'portfolio/js/particles.js' %}"></script>
+    <script src="{% static 'portfolio/js/animations.js' %}"></script>
+    <script src="{% static 'portfolio/js/main.js' %}"></script>
+</body>
+</html>

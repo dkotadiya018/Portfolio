@@ -1,0 +1,142 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="page-hero">
+    <div class="container">
+        <h1 class="page-title" data-aos="fade-down">About <span class="gradient-text">Me</span></h1>
+        <p class="page-subtitle" data-aos="fade-up">Passionate Developer | Creative Designer | Problem Solver</p>
+    </div>
+</section>
+
+<section class="about-content section-padding">
+    <div class="container">
+        <div class="about-grid">
+            <div class="about-text" data-aos="fade-right">
+                <h2>Hi, I'm <span class="gradient-text">Dhruv Kotadiya</span> from Gujarat, India</h2>
+                <p>I'm passionate about tech, problem-solving, and building real-world solutions through software. I love learning, exploring new tools, and continuously growing as a developer.</p>
+
+                <p>My journey in technology started with curiosity and has evolved into a passion for creating meaningful digital experiences. Whether it's designing intuitive user interfaces or developing robust backend systems, I strive to deliver excellence in every project.</p>
+
+                <div class="skills-tabs">
+                    <button class="tab-btn active" data-tab="skills">Skills</button>
+                    <button class="tab-btn" data-tab="education">Education</button>
+                </div>
+
+                <div class="tab-content active" id="skills">
+                    <div class="skill-category">
+                        <h3>~UI/UX</h3>
+                        <p>Designing Web/App interfaces</p>
+                        <div class="skill-bars">
+                            <div class="skill-bar" data-aos="slide-right" data-aos-delay="100">
+                                <span class="skill-name">Figma</span>
+                                <span class="skill-name">Adobe XD</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>~Web Development</h3>
+                        <p>Designing or making websites and back-end by Django</p>
+                        <div class="skill-bars">
+                            <div class="skill-bar" data-aos="slide-right" data-aos-delay="100">
+                                <span class="skill-name">Django</span>
+                                <span class="skill-name">HTML/CSS</span>
+                            </div>
+                            <div class="skill-bar" data-aos="slide-right" data-aos-delay="300">
+                                <span class="skill-name">JavaScript</span>
+                                <span class="skill-name">Python</span>
+                            </div>
+                            <div class="skill-bar" data-aos="slide-right" data-aos-delay="400">
+                                <span class="skill-name">C</span>
+                                <span class="skill-name">Java</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>~Communication</h3>
+                        <p>Interpersonal Communication and Communication Tools Proficiency</p>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Team Collaboration</span>
+                            <span class="skill-tag">Client Relations</span>
+                            <span class="skill-tag">Presentation Skills</span>
+                            <span class="skill-tag">Technical Writing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="education">
+                    <div class="education-item glass-effect">
+                        <div class="education-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="education-details">
+                            <h4>Bachelor of Engineering</h4>
+                            <p class="education-school">Government Engineering Collage - Bhavnagar</p>
+                            <p class="education-year">2022 - 2026</p>
+                            <p class="education-desc">Information & Communication Technology</p>
+                        </div>
+                    </div>
+
+                    <div class="education-item glass-effect">
+                        <div class="education-icon">
+                            <i class="fas fa-school"></i>
+                        </div>
+                        <div class="education-details">
+                            <h4>Higher Secondary</h4>
+                            <p class="education-school">Shree Omkar School Of Science - Jasdan</p>
+                            <p class="education-year">2020 - 2022</p>
+                            <p class="education-desc">Science Stream</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-visual" data-aos="fade-left">
+                <div class="visual-card glass-effect glow-box">
+                    <div class="code-snippet">
+                        <div class="code-header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                            <span class="filename">about_me.py</span>
+                        </div>
+                        <div class="code-body">
+                            <pre><code><span class="keyword">class</span> <span class="class-name">Developer</span>:
+                            <span class="keyword">def</span> <span class="function">__init__</span>(<span class="keyword">self</span>):
+                            <span class="keyword">self</span>.name = <span class="string">"Dhruv Kotadiya"</span>
+                            <span class="keyword">self</span>.location = <span class="string">"Gujarat, India"</span>
+                            <span class="keyword">self</span>.skills = [
+                            <span class="string">"Python"</span>,
+                            <span class="string">"Django"</span>,
+                            <span class="string">"JavaScript"</span>,
+                            <span class="string">"UI/UX Design"</span>
+        ]
+        <span class="keyword">self</span>.passion = <span class="string">"Creating Amazing Web Experiences"</span>
+
+    <span class="keyword">def</span> <span class="function">work</span>(<span class="keyword">self</span>):
+        <span class="keyword">while</span> <span class="keyword">True</span>:
+            <span class="function">create</span>()
+            <span class="function">innovate</span>()
+            <span class="function">deliver</span>()</code></pre>
+                        </div>
+                    </div>
+                </div>
+            <div style="text-align: center; margin-top: 20px;">
+                <a href="{% static 'portfolio/images/Dhruv_Kotadiya_CV.pdf' %}" class="btn btn-primary glow-effect" download>
+                    <i class="fas fa-download"></i>
+                    <span>Download CV</span>
+                </a>
+            </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+{% endblock %}

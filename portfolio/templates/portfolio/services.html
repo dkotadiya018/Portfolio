@@ -1,0 +1,115 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="page-hero">
+    <div class="container">
+        <h1 class="page-title" data-aos="fade-down">My <span class="gradient-text">Services</span></h1>
+        <p class="page-subtitle" data-aos="fade-up">Transforming Ideas into Digital Reality</p>
+    </div>
+</section>
+
+<section class="services-section section-padding">
+    <div class="container">
+        <div class="services-grid">
+            <div class="service-card glass-effect" data-aos="fade-up" data-aos-delay="100">
+                <div class="service-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3>Web Development</h3>
+                <p>Building responsive, fast, and scalable web applications using modern technologies like Django, React, and more.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> Full-stack Development</li>
+                    <li><i class="fas fa-check"></i> RESTful API Design</li>
+                    <li><i class="fas fa-check"></i> Database Architecture</li>
+                    <li><i class="fas fa-check"></i> Performance Optimization</li>
+                </ul>
+                <a href="{% url 'contact' %}" class="service-btn">
+                    <span>Get Started</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="service-card glass-effect featured" data-aos="fade-up" data-aos-delay="200">
+                <div class="featured-badge">Popular</div>
+                <div class="service-icon">
+                    <i class="fas fa-palette"></i>
+                </div>
+                <h3>UI/UX Design</h3>
+                <p>Creating beautiful, intuitive interfaces that provide exceptional user experiences and drive engagement.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> User Research</li>
+                    <li><i class="fas fa-check"></i> Wireframing & Prototyping</li>
+                    <li><i class="fas fa-check"></i> Visual Design</li>
+                    <li><i class="fas fa-check"></i> Usability Testing</li>
+                </ul>
+                <a href="{% url 'contact' %}" class="service-btn">
+                    <span>Get Started</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="service-card glass-effect" data-aos="fade-up" data-aos-delay="300">
+                <div class="service-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3>Project Insights</h3>
+                <p>Providing comprehensive project analysis, consulting, and strategic planning for your digital initiatives.</p>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> Technical Consulting</li>
+                    <li><i class="fas fa-check"></i> Project Management</li>
+                    <li><i class="fas fa-check"></i> Code Review</li>
+                    <li><i class="fas fa-check"></i> Performance Audits</li>
+                </ul>
+                <a href="{% url 'contact' %}" class="service-btn">
+                    <span>Get Started</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="process-section section-padding">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">My <span class="gradient-text">Work Process</span></h2>
+            <p class="section-subtitle">How I bring your ideas to life</p>
+        </div>
+
+        <div class="process-timeline">
+            <div class="process-item" data-aos="fade-right" data-aos-delay="100">
+                <div class="process-number">01</div>
+                <div class="process-content glass-effect">
+                    <h3>Discovery & Planning</h3>
+                    <p>Understanding your requirements, goals, and creating a detailed project roadmap.</p>
+                </div>
+            </div>
+
+            <div class="process-item" data-aos="fade-left" data-aos-delay="200">
+                <div class="process-number">02</div>
+                <div class="process-content glass-effect">
+                    <h3>Design & Prototyping</h3>
+                    <p>Creating wireframes, mockups, and interactive prototypes for your approval.</p>
+                </div>
+            </div>
+
+            <div class="process-item" data-aos="fade-right" data-aos-delay="300">
+                <div class="process-number">03</div>
+                <div class="process-content glass-effect">
+                    <h3>Development</h3>
+                    <p>Building your solution with clean, efficient, and scalable code.</p>
+                </div>
+            </div>
+
+            <div class="process-item" data-aos="fade-left" data-aos-delay="400">
+                <div class="process-number">04</div>
+                <div class="process-content glass-effect">
+                    <h3>Testing & Launch</h3>
+                    <p>Thorough testing, optimization, and smooth deployment to production.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

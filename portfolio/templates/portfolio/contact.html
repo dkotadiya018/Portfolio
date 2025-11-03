@@ -1,0 +1,118 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="page-hero">
+    <div class="container">
+        <h1 class="page-title" data-aos="fade-down">Get In <span class="gradient-text">Touch</span></h1>
+        <p class="page-subtitle" data-aos="fade-up">Let's create something amazing together</p>
+    </div>
+</section>
+
+<section class="contact-section section-padding">
+    <div class="container">
+        <div class="contact-grid">
+            <div class="contact-info" data-aos="fade-right">
+                <h2>Let's Connect</h2>
+                <p>I'm always interested in hearing about new projects and opportunities. Whether you have a question or just want to say hi, feel free to reach out!</p>
+
+                <div class="contact-methods">
+                    <div class="contact-method glass-effect">
+                        <div class="method-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="method-details">
+                            <h4>Email</h4>
+                            <a href="mailto:your.email@example.com">your.email@example.com</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-method glass-effect">
+                        <div class="method-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="method-details">
+                            <h4>Phone</h4>
+                            <a href="tel:+919876543210">+91 98765 43210</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-method glass-effect">
+                        <div class="method-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="method-details">
+                            <h4>Location</h4>
+                            <p>Gujarat, India</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="social-connect">
+                    <h4>Connect with me</h4>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/dhruv-kotadiya-cte-gecbvn-ict" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/dkotadiya018" class="social-icon"><i class="fab fa-github"></i></a>
+                        <a href="https://www.instagram.com/_dhruv_kotadiya_1412?igsh=MWZ5dWh0YWlxNWJjYQ==" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form-wrapper" data-aos="fade-left">
+                <form method="post" class="contact-form glass-effect">
+                    {% csrf_token %}
+
+                    {% if messages %}
+                    <div class="messages">
+                        {% for message in messages %}
+                        <div class="message {{ message.tags }}">
+                            <i class="fas fa-check-circle"></i>
+                            {{ message }}
+                        </div>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+
+                    <div class="form-group">
+                        <!--suppress XmlInvalidId -->
+                        <label for="id_name">
+                            <i class="fas fa-user"></i>
+                            Full Name
+                        </label>
+                        {{ form.name }}
+                    </div>
+
+                    <div class="form-group">
+                        <label for="id_email">
+                            <i class="fas fa-envelope"></i>
+                            Email Address
+                        </label>
+                        {{ form.email }}
+                    </div>
+
+                    <div class="form-group">
+                        <label for="id_subject">
+                            <i class="fas fa-tag"></i>
+                            Subject
+                        </label>
+                        {{ form.subject }}
+                    </div>
+
+                    <div class="form-group">
+                        <label for="id_message">
+                            <i class="fas fa-comment"></i>
+                            Message
+                        </label>
+                        {{ form.message }}
+                    </div>
+
+                    <button type="submit" class="btn btn-primary glow-effect">
+                        <i class="fas fa-paper-plane"></i>
+                        <span>Send Message</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

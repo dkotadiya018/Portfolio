@@ -1,0 +1,98 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container hero-container">
+        <div class="hero-content" data-aos="fade-right">
+            <h1 class="hero-title">
+                Hello,<br>
+                I am <span class="gradient-text">Dhruv Kotadiya</span><br>
+                From Surat Gujarat, India.
+            </h1>
+            <p class="hero-subtitle typing-effect">Crafting Digital Experiences with Creativity & Code</p>
+
+            <div class="hero-buttons">
+                <a href="{% url 'contact' %}" class="btn btn-primary glow-effect">
+                    <span>Hire Me</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="{% url 'projects' %}" class="btn btn-secondary glass-btn">
+                    <span>Explore Work</span>
+                    <i class="fas fa-rocket"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-image" data-aos="fade-left">
+            <div class="image-container glow-box">
+                <img src="../../static/portfolio/images/DK04_Prl.jpg" alt="Dhruv Kotadiya">
+            </div>
+        </div>
+    </div>
+
+    <div class="scroll-indicator">
+        <div class="mouse">
+            <div class="wheel"></div>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Projects Section -->
+<section class="featured-projects section-padding">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+            <p class="section-subtitle">Showcase of my recent creative work</p>
+        </div>
+
+        <div class="projects-grid">
+            {% for project in projects %}
+            <div class="project-card glass-effect" data-aos="fade-up" data-aos-delay="{{ forloop.counter0|add:'1' }}00">
+                <div class="project-image">
+                    <img src="{{ project.image.url }}" alt="{{ project.title }}">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="{{ project.project_url }}" class="project-link" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="{{ project.github_url }}" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3>{{ project.title }}</h3>
+                    <p>{{ project.description|truncatewords:20 }}</p>
+                    <div class="project-tech">
+                        {% for tech in project.tech_stack.split %}
+                        <span class="tech-tag">{{ tech }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            {% empty %}
+            <p>No projects available yet.</p>
+            {% endfor %}
+        </div>
+
+        <div class="text-center" data-aos="fade-up">
+            <a href="{% url 'projects' %}" class="btn btn-primary glow-effect">View All Projects</a>
+        </div>
+    </div>
+</section>
+
+
+<!-- CTA Section -->
+<section class="cta-section section-padding">
+    <div class="container">
+        <div class="cta-content glass-effect glow-box" data-aos="zoom-in">
+            <h2 class="gradient-text">Ready to Start Your Project?</h2>
+            <p>Let's collaborate and create something amazing together!</p>
+            <a href="{% url 'contact' %}" class="btn btn-primary glow-effect">Get In Touch</a>
+        </div>
+    </div>
+</section>
+{% endblock %}
