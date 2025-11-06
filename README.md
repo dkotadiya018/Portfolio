@@ -146,17 +146,6 @@ Dhruv_Kotadiya_Portfolio/
 **Dhruv Kotadiya**  
 Aspiring Full-Stack Developer passionate about building interactive web applications and beautiful user interfaces.
 
-🌍 [LinkedIn](https://linkedin.com/in/dhruv-kotadiya)  
-📧 dhruv.kotadiya@example.com (replace with your email)  
-💼 Portfolio: [Your Portfolio URL once hosted]
-
----
-
-## 📜 License
-
-This project is licensed under the **MIT License** — feel free to use, modify, and share it with credit.
-
----
-
-### ⭐ If you like this project
-Give it a star on GitHub and share feedback to help improve it!
+🌍 [LinkedIn](www.linkedin.com/in/dhruv-kotadiya-cte-gecbvn-ict)  
+📧 dkotadiya004@gmail.com 
+💼 Portfolio: ( https://dhruv-kotadiya-portfolio.onrender.com )
