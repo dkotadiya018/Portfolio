@@ -257,4 +257,3 @@ if (window.location.hostname === 'localhost') {
 
     measureFPS();
 }
-
